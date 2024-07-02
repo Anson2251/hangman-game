@@ -53,6 +53,11 @@
             margin: 20px;
         }
     </style>
+    <script>
+        function openBooklet() {
+            window.open(location.href + "/user-booklet/HangmanGameBooklet.html", "_blank").focus();
+        }
+    </script>
 </head>
 <body>
     <h1 class="header">Hangman Game</h1 >
@@ -66,5 +71,6 @@
         <button onclick="location.reload();">Start Over</button  >
     </div >
     <script src="script.js"></script>
+    <button onclick='openBooklet()' style="height: 2em; width: 3em; position: absolute; right: 0; top: 0;">help</button>
 </body>
 </html>
