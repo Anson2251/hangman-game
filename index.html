@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+
+            padding: 0;
+            margin: 0;
+
+            display: grid;
+            grid-gap: 8px;
+            grid-template-rows: 6em, auto, 6em;
+            grid-template-columns: auto;
+        }
+
+        .header {
+            grid-column: 1/1;
+            grid-row: 1/1;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .canvasContainer {
+            grid-column: 1/1;
+            grid-row: 2/2;
+
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .infoContainer {
+            grid-column: 1/1;
+            grid-row: 3/3;
+
+            text-align: center;
+        }
+
+        canvas {
+            border: 1px solid black;
+        }
+        #word {
+            font-size: 24px;
+            margin: 20px;
+        }
+        #letters {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="header">Hangman Game</h1 >
+    <div class="canvasContainer">
+        <canvas id="hangmanCanvas" width="400" height="400"></canvas>
+    </div >
+    <div class="infoContainer">
+        <div id="word" style="font-family: monospace;"></div>
+        <div id="letters"></div>
+        <label>Incorrect guesses number: <span id="incorrectNum"></span> / 8</label>
+        <button onclick="location.reload();">Start Over</button  >
+    </div >
+    <script src="script.js"></script>
+</body>
+</html>
